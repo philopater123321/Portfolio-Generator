@@ -7,5 +7,70 @@ body {
     background-color: rgb(12, 65, 96);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
+    color: white;
 }
 
+.sec1 {
+    background-color: #08263b;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+    border-radius: 60px;
+    padding: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgb(68, 157, 160);
+    align-items: center;
+}
+
+.sec1-1 {
+    font-size: 0.9rem;
+    margin: 0;
+    margin-left: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color:rgb(0, 255, 251);
+    text-shadow: 0 0 25px rgb(0, 238, 255);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.sec1-1:hover{
+    transform: scale(1.035) translateY(-4px) rotate(1.5deg);
+}
+
+.sec1-2 {
+    display: flex;
+    gap: 20px;
+}
+
+.theme-select, .create-new, .export-html {
+    background-color: rgb(59, 134, 205);
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(99, 245, 255, 0.4);
+    transition: transform 0.3s;
+}
+
+.theme-select:hover, .create-new:hover, .export-html:hover {
+    transform: scale(1.005) translateY(-3px);
+}
+
+.username{
+    cursor: pointer;
+    text-shadow: 0 0 25px rgb(11, 229, 244);
+    transition: transform 0.3s;
+    margin-right: 20px;
+}
+
+.username:hover{
+    transform: scale(1.005) translateY(-4px);
+}
