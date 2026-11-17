@@ -9,7 +9,9 @@ body {
     line-height: 1.6;
     color: white;
 }
-
+.portfolio-head{
+    font-size: 35px;
+}
 .sec1 {
     background-color: #08263b;
     display: flex;
@@ -47,7 +49,7 @@ body {
     gap: 20px;
 }
 
-.theme-select, .create-new, .export-html {
+.theme-select, .export-html {
     background-color: rgb(59, 134, 205);
     border-radius: 20px;
     border: none;
@@ -60,12 +62,31 @@ body {
     transition: transform 0.3s;
 }
 
-.theme-select:hover, .create-new:hover, .export-html:hover {
+.theme-select:hover, .export-html:hover {
     transform: scale(1.005) translateY(-3px);
+    background-color: rgb(29, 105, 149);
 }
 
+.create-new{
+    background-color: rgb(255, 0, 0);
+    border:none;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(99, 245, 255, 0.4);
+    transition: transform 0.3s;
+}
+
+.create-new:hover{
+    transform: scale(1.005) translateY(-3px);
+    background-color: rgb(158, 41, 41);
+}
 .username{
     cursor: pointer;
+    color: rgb(11, 229, 244);
     text-shadow: 0 0 25px rgb(11, 229, 244);
     transition: transform 0.3s;
     margin-right: 20px;
@@ -108,4 +129,28 @@ body {
 .preview-sec:hover{
     transform: scale(1.005) translateY(-4px);
     box-shadow: 0 0 25px rgba(39, 103, 114, 0.8);
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.form-group label{
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.head-h2{
+    font-size: 35px;
+    color:rgb(0, 238, 255);
+    text-shadow: 0 0 15px rgb(11, 229, 244);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.head-h2:hover{
+    transform: scale(1.005) translateY(-4px);
 }
