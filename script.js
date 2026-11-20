@@ -9,6 +9,8 @@ const previewBio = document.getElementById('preview-bio');
 const previewGithubText = document.getElementById('github-text');
 const previewGithubLink = document.getElementById('preview-github');
 
+const headerUsername = document.getElementById('username');
+
 const skillsInput = document.getElementById('input-skills');
 const addSkillBtn = document.getElementById('add-skill-btn');
 const builderSkillsList = document.getElementById('builder-skills');
@@ -20,7 +22,10 @@ const createNewBtn = document.getElementById('create-new');
 const form = document.getElementById('build-form');
 
 function updatePreview() {
+    const currentName = nameInput.value || 'Your Name';
     previewName.textContent = nameInput.value || 'Your Name' ;
+    headerUsername.textContent = currentName;
+
     previewRole.textContent = roleInput.value || 'Your Role / Title';
     previewBio.textContent = bioInput.value || 'Your Bio will appear here...';
 
@@ -79,6 +84,7 @@ builderSkillsList.addEventListener('click', (e) => {
         const index = e.target.getAttribute('data-index');
         skillsArray.splice(index, 1);
         buildSkills();
+        saveData();
     }
 });
 
@@ -92,7 +98,11 @@ function applyTheme(themeName){
     }
 }
 
-themeSelect.addEventListener('change', (e) => applyTheme(e.target.value));
+themeSelect.addEventListener('change', (e) => {
+    applyTheme(e.target.value);
+    saveData();
+}
+);
 
 createNewBtn.addEventListener('click', () => {
     if(confirm("Are you sure you want to clear everything?")){
@@ -102,6 +112,7 @@ createNewBtn.addEventListener('click', () => {
         applyTheme('Dark');
         updatePreview();
         buildSkills();
+        localStorage.removeItem('myPortfolioData');
     }
 });
 
