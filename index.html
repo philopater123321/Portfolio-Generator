@@ -17,9 +17,8 @@
         </div>
         <div class="sec1-2">
             <select id="theme-select" class="theme-select">
-                <option value="Red">Red 🔴</option>
-                <option value="Black">Black ⚫</option>
-                <option value="Purple">Purple 🟣</option>
+                <option value="Red">Dark Mode</option>
+                <option value="Black">Light Mode</option>
             </select>
             <button id="create-new" class="create-new">Create New</button>
             <button id="export-html" class="export-html">Export HTML</button>
@@ -44,7 +43,11 @@
                 </div>
                 <div class="form-group">
                     <label for="input-skills">Your Skills</label>
-                    <input type="text" id="input-skills" placeholder="HTML, CSS, Javascript etc...">
+                    <div class="skill-input-part">
+                        <input type="text" id="input-skills" placeholder="HTML, CSS, Javascript etc...">
+                        <button type="button" id="add-skill-btn" class="add-btn">Add</button>
+                    </div>
+
                 </div>
                 <div class="form-group">
                     <label for="input-github">Your Github Account Link</label>
