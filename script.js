@@ -20,6 +20,7 @@ const themeSelect = document.getElementById('theme-select');
 
 const createNewBtn = document.getElementById('create-new');
 const form = document.getElementById('build-form');
+const exportBtn = document.getElementById('export-html');
 
 function updatePreview() {
     const currentName = nameInput.value || 'Your Name';
@@ -114,7 +115,36 @@ createNewBtn.addEventListener('click', () => {
     }
 });
 
+exportBtn.addEventListener('click', () => {
+    const cardHTML = document.getElementById('portfolio-preview').outerHTML;
 
+    const fullHTML = `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>${nameInput.value || 'Portfolio'}</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body {display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: rgb(12, 65, 96);}
+            body.lightmode {background-color: #93acc5;}
+            .card-container {max-width: 600px; width: 100%;}
+        </style>
+    </head>
+    <body class="${themeSelect.value === 'Light' ? 'light-mode' : ''}">
+        ${cardHTML}
+    </body>
+    </html>
+    `;
+
+    const blob = new Blob([fullHTML], {type: 'text/html'});
+    const link = document.createElement('a');
+    link.href=URL.createObjectURL(blob);
+    link.download = 'My_portfolio.html';
+
+    link.click();
+});
 
 function saveData() {
     const dataToSave ={
