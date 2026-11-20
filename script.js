@@ -69,3 +69,11 @@ skillsInput.addEventListener('keypress', (e) => {
         addSkill()
     }
 });
+
+builderSkillsList.addEventListener('click', (e) => {
+    if (e.target.classList.contains('delete-skill')) {
+        const index = e.target.getAttribute('data-index');
+        skillsArray.splice(index, 1);
+        buildSkills();
+    }
+});
