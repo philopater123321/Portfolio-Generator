@@ -13,6 +13,7 @@ const skillsInput = document.getElementById('input-skills');
 const addSkillBtn = document.getElementById('add-skill-btn');
 const builderSkillsList = document.getElementById('builder-skills');
 const previewSkillsList = document.getElementById('preview-skills');
+const themeSelect = document.getElementById('theme-select');
 
 
 function updatePreview() {
@@ -77,3 +78,15 @@ builderSkillsList.addEventListener('click', (e) => {
         buildSkills();
     }
 });
+
+function applyTheme(themeName){
+    if (themeName === 'Light'){
+        document.body.style.backgroundColor = '#f0f4f8';
+        document.body.style.color = '#1a202c';
+    } else{
+        document.body.style.backgroundColor = 'rgb(12, 65, 96)';
+        document.body.style.color = 'white';
+    }
+}
+
+themeSelect.addEventListener('change', (e) => applyTheme(e.target.value));
