@@ -105,3 +105,36 @@ createNewBtn.addEventListener('click', () => {
     }
 });
 
+function saveData() {
+    const dataToSave ={
+        name: nameInput.value,
+        role: roleInput.value,
+        bio: bioInput.value,
+        github: githubInput.value,
+        skills: skillsArray,
+        theme: themeSelect.value
+    };
+    localStorage.setItem('myPortfolioData', JSON.stringify(dataToSave));
+}
+
+function loadData() {
+    const saved = localStorage.getItem('myPortfolioData');
+    if (saved) {
+        const parsed = JSON.parse(saved);
+        nameInput.value = parsed.name || '';
+        roleInput.value = parsed.role || '';
+        bioInput.value = parsed.bio || '';
+        githubInput.value = parsed.github || '';
+        skillsArray = parsed.skills || ['HTML', 'CSS', 'JavaScript'];
+        themeSelect.value = parsed.theme || 'Dark';
+
+        updatePreview();
+        buildSkills();
+        applyTheme(themeSelect.value);
+    }
+}
+
+document.getElementById('build-form').addEventListener('input', saveData);
+document.getElementById('build-form').addEventListener('click', () => setTimeout(saveData, 50));
+
+loadData();
