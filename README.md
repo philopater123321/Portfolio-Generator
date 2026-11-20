@@ -13,3 +13,6 @@
 - after all of that, you can export your portfolio as an html file, which contain all your inserted info.
 - local storage, whenever you enter the website or refresh it the whole text doesn't disappar.
 - light and dark mode to make it look cool ngl I prefer the dark mode :)
+
+You can access this website throughout this demo url: 
+https://philopater123321.github.io/Portfolio-Generator/
