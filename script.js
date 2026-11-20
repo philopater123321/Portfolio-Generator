@@ -35,7 +35,7 @@ updatePreview()
 
 let skillsArray = ['HTML', 'CSS', 'JavaScript'];
 
-function addSkills() {
+function buildSkills() {
     builderSkillsList.innerHTML = '';
     previewSkillsList.innerHTML = '';
 
@@ -51,4 +51,21 @@ function addSkills() {
     });
 }
 
-addSkills();
+buildSkills();
+
+function addSkill() {
+    const newSkill = skillsInput.value.trim();
+    if (newSkill !== '') {
+        skillsArray.push(newSkill);
+        skillsInput.value = '';
+        buildSkills();
+    }
+}
+addSkillBtn.addEventListener('click', addSkill);
+
+skillsInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter'){
+        e.preventDefault();
+        addSkill()
+    }
+});
