@@ -90,11 +90,9 @@ builderSkillsList.addEventListener('click', (e) => {
 
 function applyTheme(themeName){
     if (themeName === 'Light'){
-        document.body.style.backgroundColor = '#f0f4f8';
-        document.body.style.color = '#1a202c';
+        document.body.classList.add('light-mode');
     } else{
-        document.body.style.backgroundColor = 'rgb(12, 65, 96)';
-        document.body.style.color = 'white';
+        document.body.classList.remove('light-mode');
     }
 }
 
@@ -115,6 +113,8 @@ createNewBtn.addEventListener('click', () => {
         localStorage.removeItem('myPortfolioData');
     }
 });
+
+
 
 function saveData() {
     const dataToSave ={

@@ -303,3 +303,38 @@ input::placeholder, textarea::placeholder{
 .builder-skills-list li:hover{
     transform: translateY(-3px);
 }
+
+body.light-mode{
+    background-color: #93acc5;
+}
+
+body.light-mode .sec1,
+body.light-mode .build-sec,
+body.light-mode .preview-sec,
+body.light-mode .card-container{
+    background-color: rgb(233, 244, 255);
+    border: 1px solid #67727e;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .head-h2,
+body.light-mode .card-header h1,
+body.light-mode .username,
+body.light-mode .sec1-1{
+    color:rgb(0, 90, 164);
+}
+
+body.light-mode .card-header h3,
+body.light-mode .skill-section h4{
+    color: rgb(5, 46, 85);
+}
+
+body.light-mode .card-body p{
+    color: black;
+}
+
+
+
+body.light-mode label{
+    color: black;
+}
