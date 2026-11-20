@@ -13,8 +13,11 @@ const skillsInput = document.getElementById('input-skills');
 const addSkillBtn = document.getElementById('add-skill-btn');
 const builderSkillsList = document.getElementById('builder-skills');
 const previewSkillsList = document.getElementById('preview-skills');
+
 const themeSelect = document.getElementById('theme-select');
 
+const createNewBtn = document.getElementById('create-new');
+const form = document.getElementById('build-form');
 
 function updatePreview() {
     previewName.textContent = nameInput.value || 'Your Name' ;
@@ -90,3 +93,15 @@ function applyTheme(themeName){
 }
 
 themeSelect.addEventListener('change', (e) => applyTheme(e.target.value));
+
+createNewBtn.addEventListener('click', () => {
+    if(confirm("Are you sure you want to clear everything?")){
+        form.reset();
+        skillsArray = ['HTML', 'CSS', 'JavaScript'];
+        themeSelect.value = 'Dark';
+        applyTheme('Dark');
+        updatePreview();
+        buildSkills();
+    }
+});
+
