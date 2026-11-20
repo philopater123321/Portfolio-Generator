@@ -142,11 +142,12 @@ body {
 }
 
 .head-h2{
-    font-size: 35px;
+    font-size: 2.8rem;
     color:rgb(0, 238, 255);
     text-shadow: 0 0 15px rgb(11, 229, 244);
     cursor: pointer;
     transition: transform 0.3s;
+    width: fit-content;
 }
 
 .head-h2:hover{
@@ -181,3 +182,15 @@ input::placeholder, textarea::placeholder{
     box-shadow: 0 0 25px rgba(99, 245, 255, 0.4);
 }
 
+.card-header h1{
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    color: rgb(0, 238, 255);
+    transition: text-shadow 0.3s;
+    width: fit-content;
+}
+
+.card-header h1:hover{
+    color: rgb(181, 226, 250);
+    text-shadow: 0 0 25px rgba(99, 245, 255, 0.4);
+}
