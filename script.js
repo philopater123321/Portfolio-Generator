@@ -125,11 +125,15 @@ exportBtn.addEventListener('click', () => {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>${nameInput.value || 'Portfolio'}</title>
-        <link rel="stylesheet" href="style.css">
         <style>
-            body {display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: rgb(12, 65, 96);}
-            body.lightmode {background-color: #93acc5;}
-            .card-container {max-width: 600px; width: 100%;}
+            body {background: #0f5689; color: white; font-family: sans-serif; display: flex; justify-content: center; padding: 50px;}
+            body.light-mode{background: #93acc5; color: black;}
+
+            body.light-mode #portfolio-preview {background: white;}
+            ul {list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0;}
+            li {background: rgb(59, 134, 205); padding: 10px 20px; border-radius: 20px; font-weight: bold;}
+
+            a{text-decoration: none; display: inline-block; background: black; color: white; padding: 10px 20px; border-radius: 15px; font-weight: bold;}
         </style>
     </head>
     <body class="${themeSelect.value === 'Light' ? 'light-mode' : ''}">
